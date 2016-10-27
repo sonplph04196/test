@@ -2,11 +2,7 @@
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <hgroup class="title">
-        <h1>Mọi Thắc Mắc Xin Liên Hệ:<br />
-            Số Điện Thoại:0987654321<br />
-            Email:thegioidienmay@gmail.com<br />
-            Hỗ trợ:trananh@yahoo.com<br />
-            Hỗ Trợ Trực Tuyến:0102030405<br />
+        <h1>5<br />
             </centrer><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59577.96845379985!2d105.72650549530823!3d21.047764412795544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454c4a7c60651%3A0xbec6bd3e12f90b7!2zUGjDuiBEaeG7hW4sIFThu6sgTGnDqm0sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1476354061783" width="450" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></centrer>
             <%: Title %></h1>
     </hgroup>
