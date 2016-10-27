@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "INF205_ASSIGNMENT_GD2_NHOM4", "http://localhost:58329", "{F7482481-3F0E-408E-AFCB-8F37A7ADB88B}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_58329"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\INF205_ASSIGNMENT_GD2_NHOM4\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58329\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_58329"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\INF205_ASSIGNMENT_GD2_NHOM4\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58329\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\WebSites\INF205_ASSIGNMENT_GD2_NHOM4\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7482481-3F0E-408E-AFCB-8F37A7ADB88B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7482481-3F0E-408E-AFCB-8F37A7ADB88B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

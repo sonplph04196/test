@@ -1,0 +1,117 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeFile="Site.master.vb" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <asp:PlaceHolder runat="server">    
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" /> 
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form runat="server">
+    <asp:ScriptManager runat="server">
+        <Scripts>
+            <%--Framework scripts--%>
+            <asp:ScriptReference Name="MsAjaxBundle" />
+            <asp:ScriptReference Name="jquery" />
+            <asp:ScriptReference Name="jquery.ui.combined" />
+            <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+            <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+            <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+            <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+            <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+            <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+            <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+            <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+            <asp:ScriptReference Name="WebFormsBundle" />
+            <%--Site scripts--%>
+
+        </Scripts>
+    </asp:ScriptManager>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">
+                    <a runat="server" href="~/">
+                        <asp:Image ImageUrl ="~/Images/dienmay.jpg" runat ="server" /></a></p>
+            </div>
+            <div class="float-right">
+                <section id="login">
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul>
+                                <li><a id="registerLink" runat="server" href="~/Account/Register.aspx">Đăng Ký</a></li>
+                                <li><a id="loginLink" runat="server" href="~/Account/Login.aspx">Đăng Nhập</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <p>
+                                Hello, <a runat="server" class="username" href="~/Account/Manage.aspx" title="Manage your account">
+                                    <asp:LoginName runat="server" CssClass="username" />
+                                </a>!
+                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+                            </p>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </section>
+                <nav>
+                    <ul id="menu">
+                        <li><a runat="server" href="~/">Trang Chủ</a></li>
+                        <li><a runat="server" href="~/About.aspx">Giới Thiệu</a></li>
+                        <li><a runat="server" href="~/Contact.aspx">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <ul class="flLeft" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: normal; font-stretch: inherit; font-size: 12px; line-height: inherit; font-family: Arial, Helvetica, sans-serif; list-style: none outside none; color: rgb(51, 51, 51); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+                <li style="box-sizing: border-box; margin: 0px; padding: 3px 5px 3px 0px; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; color: rgb(255, 255, 255); float: left;"><a href="tel:1900545546" style="box-sizing: border-box; margin: 0px; padding: 0px; background-color: transparent; color: rgb(255, 255, 255); text-decoration: none; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px; line-height: inherit; font-family: inherit;">
+                    <br class="Apple-interchange-newline" />
+                    Mua hàng: 1900 545 546</a></li>
+                <li class="hidden-xs hidden-xxs" style="box-sizing: border-box; margin: 0px; padding: 3px 5px 3px 0px; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; color: rgb(255, 255, 255); float: left;"><span class="icon-phone glyphicon glyphicon-phone-alt" style="box-sizing: border-box; margin: -3px -3px 0px 10px; padding: 0px; border: 0px none; font-style: normal; font-variant: inherit; font-weight: 400; font-stretch: inherit; font-size: inherit; line-height: 1; font-family: &quot;Glyphicons Halflings&quot;; position: relative; top: 1px; display: inline-block; -webkit-font-smoothing: antialiased; height: 16px; width: 14px;"></span></li>
+                <li class="hidden-xs" style="box-sizing: border-box; margin: 0px; padding: 3px 5px 3px 0px; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; color: rgb(255, 255, 255); float: left;"><a href="tel:0963649191" style="box-sizing: border-box; margin: 0px; padding: 0px; background-color: transparent; color: rgb(255, 255, 255); text-decoration: none; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px; line-height: inherit; font-family: inherit;">Hotline: 0963 64 9191</a></li>
+                <li class="hidden-xxs" style="box-sizing: border-box; margin: 0px; padding: 3px 5px 3px 0px; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; color: rgb(255, 255, 255); float: left;"><span class="icon-phone glyphicon glyphicon-phone-alt" style="box-sizing: border-box; margin: -3px -3px 0px 10px; padding: 0px; border: 0px none; font-style: normal; font-variant: inherit; font-weight: 400; font-stretch: inherit; font-size: inherit; line-height: 1; font-family: &quot;Glyphicons Halflings&quot;; position: relative; top: 1px; display: inline-block; -webkit-font-smoothing: antialiased; height: 16px; width: 14px;"></span></li>
+                <li style="box-sizing: border-box; margin: 0px; padding: 3px 5px 3px 0px; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; color: rgb(255, 255, 255); float: left;"><a href="tel:1900545545" style="box-sizing: border-box; margin: 0px; padding: 0px; background-color: transparent; color: rgb(255, 255, 255); text-decoration: none; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px; line-height: inherit; font-family: inherit;">CSKH: 1900 545 545</a></li>
+                <li style="box-sizing: border-box; margin: 0px; padding: 3px 5px 3px 0px; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; color: rgb(255, 255, 255); float: left;"></li>
+            </ul>
+            <br class="Apple-interchange-newline" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="col-lg-2 hidden-md hidden-sm hidden-xs" style="box-sizing: border-box; margin: 0px; padding: 0px 5px; border: 0px none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: bold; font-stretch: inherit; font-size: 12px; line-height: inherit; font-family: Arial, Helvetica, sans-serif; position: relative; min-height: 1px; float: left; width: 200px; color: rgb(128, 128, 128); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+                <br class="Apple-interchange-newline" />
+                <span class="sup-a flLeft" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; float: left; background: url(&quot;https://lib.trananh.com.vn/img/icon.png&quot;) -37px -241px no-repeat scroll rgba(0, 0, 0, 0); display: block; height: 32px; width: 32px;"></span>
+                <p style="box-sizing: border-box; margin: 11px 0px 0px 38px; padding: 0px; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit;">
+                    <a href="https://www.trananh.vn/tin-tuc/khuyen-mai-tai-tran-anh/3-chinh-sach-dot-pha-–-ngan-gia-tri-uu-dai-n33737" style="box-sizing: border-box; margin: 0px; padding: 0px; background-color: transparent; color: gray; text-decoration: none; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit;">Dịch vụ đột phá</a></p>
+            </div>
+            <div class="col-lg-2 hidden-md hidden-sm hidden-xs" style="box-sizing: border-box; margin: 0px; padding: 0px 5px; border: 0px none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: bold; font-stretch: inherit; font-size: 12px; line-height: inherit; font-family: Arial, Helvetica, sans-serif; position: relative; min-height: 1px; float: left; width: 200px; color: rgb(128, 128, 128); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+                <span class="sup-b flLeft" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; float: left; background: url(&quot;https://lib.trananh.com.vn/img/icon.png&quot;) -37px -282px no-repeat scroll rgba(0, 0, 0, 0); display: block; height: 32px; width: 32px;"></span>
+                <p style="box-sizing: border-box; margin: 11px 0px 0px 38px; padding: 0px; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit;">
+                    <a href="https://www.trananh.vn/tin-tuc/tin-khuyen-mai/mua-hang-tra-gop-lai-suat-0-voi-the-sacombank-n33003" style="box-sizing: border-box; margin: 0px; padding: 0px; background-color: transparent; color: gray; text-decoration: none; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit;">Trả góp ưu đãi</a></p>
+            </div>
+            <div class="col-lg-2 hidden-md hidden-sm hidden-xs" style="box-sizing: border-box; margin: 0px; padding: 0px 5px; border: 0px none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: bold; font-stretch: inherit; font-size: 12px; line-height: inherit; font-family: Arial, Helvetica, sans-serif; position: relative; min-height: 1px; float: left; width: 200px; color: rgb(128, 128, 128); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+                <span class="sup-c flLeft" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; float: left; background: url(&quot;https://lib.trananh.com.vn/img/icon.png&quot;) -37px -323px no-repeat scroll rgba(0, 0, 0, 0); display: block; height: 32px; width: 32px;"></span>
+                <p style="box-sizing: border-box; margin: 11px 0px 0px 38px; padding: 0px; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit;">
+                    <a href="https://www.facebook.com/dienmaytrananh" style="box-sizing: border-box; margin: 0px; padding: 0px; background-color: transparent; color: gray; text-decoration: none; border: 0px none; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit;">Facebook</a></p>
+            </div>
+        </div>
+    </header>
+    <div id="body">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application
+                </p>
+            </div>
+        </div>
+    </footer>
+    </form>
+</body>
+</html>
